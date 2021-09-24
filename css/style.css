@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #1c1c1c !important;
+  position: relative;
+  user-select: none;
+  z-index: 1;
+}
+
+/*Copy tooltip thing*/
+.my-tool-tip {
+  color:black;
+}
+/*Img things*/
+img {
+    position: absolute;
+    top: 8px;
+    left: 1vh;
+    font-size: 18px;
+    display: flex;
+    flex-wrap:wrap;
+    transform: scale(120%) translateY(30%)
+
+}
+
+.responsive {
+    width: 100%;
+    max-width: 55px;
+    max-height: fit-content;
+    height: auto;
+    padding-bottom: 0;
+}
+
+/*Name / Top thing*/
+name {
+  font-weight: 900;
+	color: #2A482B;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%) scale(1, 1);
+	transition: 0.5s ease-in-out;
+  font-size: 56px;
+}
+
+name.top {
+	top: 0;
+  flex:content;
+	transform: translateX(-50%);
+  font-size: 56px;
+	float: right;
+  opacity: 100;
+}
+
+name.top a{
+  text-decoration:underline;
+	color: #2A482B;
+}
+name.top a:hover {
+  color: rgba(177, 177, 177, 0.374);
+  font-size: 58px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.96);
+  margin-bottom: 10px;
+}
+
+name.top-sub {
+	top: 0;
+  flex:content;
+	transform: translateX(-50%);
+  font-size: 64px;
+	float: right;
+  opacity: 100;
+  color: rgba(240, 248, 255, 0.734); 
+  transform: translateY(210%) translateX(-50%);
+  font-size: 1.3rem; margin: 0;
+}
+
+/* Rounded border */
+hr.rounded {
+    position: relative;
+    border-top: 0.3px solid rgb(255, 255, 255);
+    border-radius: 18%;
+    background-color: aliceblue;
+    width: 100vh;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*Cards*/
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0 0;
+  padding-top: 10px;
+}
+
+body .container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  transition: 0.5s;
+}
+
+body .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e95e1e;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container .card:nth-child(4) .box .content a {
+    background: #23bcc1;
+}
+
+body .container .card:nth-child(5) .box .content a {
+    background: #a432c0;
+}
+
+body .container .card:nth-child(6) .box .content a {
+    background: #c13323;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+body .container .card .box:hover {
+  transform: scale(105%);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  display: block;
+}
+
+body .container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content .p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content .p a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.07);
+  margin-top: 0px;
+  transition: 0;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0px 2px;
+}
+
+body .container .card .box .content .p a:hover {
+  box-shadow: none;
+  background:none;
+  color: rgba(255, 255, 255, 0.535);
+  transform: scale(105%) translateY(-2px);
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 15px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transition: 0.3s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+  transform: scale(110%) translateY(-5px);
+}
+
+
+/*            */
+/*            */
+/*            */
+/*End of card*/
+/*            */
+/*            */
+/* Content things below*/
+
+body .nhcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0 0;
+  padding-top: 10vh;
+}
+
+body .nhcontainer .content {
+  padding: 20px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  transform: translateY(-15rem);
+}
+
+body .nhcontainer .content h2 {
+  font-size: 3rem;
+  color: white
+}
+
+body .nhcontainer .content h3 {
+  font-size: 2.3rem;
+  color: rgba(255, 255, 255, 0.912);
+}
+
+body .nhcontainer .content h4{
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.748);
+}
+
+body .nhcontainer .content .p {
+  color: rgba(237, 234, 234, 0.864);
+  font-size: 1.2rem;
+}
+
+body .nhcontainer .content .p a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.07);
+  margin-top: 0px;
+  transition: 0;
+  border-radius: 0px;
+  box-shadow: none;
+  padding: 0px 2px;
+}
+
+body .nhcontainer .content .p a:hover {
+  box-shadow: none;
+  background:none !important;
+  color: rgba(255, 255, 255, 0.535);
+  transform: scale(105%) translateY(-2px);
+}
+
+body .nhcontainer .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 15px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transition: 0.3s;
+  z-index: 1;
+}
+body .nhcontainer .content a:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  background: #fff !important;
+  color: #000;
+  transform: scale(110%) translateY(-5px);
+  z-index: 1000000;
+}
+
+body .nhcontainer .content button {
+  position: relative;
+  display: inline-block;
+  padding: 8px 19px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  transition: 0.3s;
+  z-index: 2;
+}
+body .nhcontainer .content button:hover {
+  margin-top: 15px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  background: #fff !important;
+  color: #000;
+  transform: translateY(-0.47vh);
+  z-index: 1;
+}
+
+body .nhcontainer .content li{
+  text-align: left;
+  font-size: 1.1rem;
+  color: rgba(240, 248, 255, 0.631);
+}
+
+
+/*Phone and tablet font sizing*/
+@media only screen and (max-width: 1300px) {
+  body .nhcontainer {
+    padding-top: 13.5rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body .nhcontainer {
+    padding-top: 16.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  name.top {
+    font-size: 44px;
+  }
+  name.top-sub {
+    transform: translateY(140%) translateX(-50%);
+  }
+
+  body .container .card .box .content h3 { 
+    font-size: 1.625rem;
+  }
+
+  body .container .card .box .container h2 {
+    font-size: 4rem;
+  }
+
+  body .container .card .box .content p {
+    font-size: 0.95rem;
+  }
+  
+  body .container .card .box .content a {
+    font-size: 0.9rem;
+  }
+
+  body .container .card .box .content a:hover {
+    transform: scale(105%) translateY(-2.5px);
+  }
+
+  body .container .card .box:hover {
+    transform: scale(102.5%);
+  }
+
+  .material-icons-outlined.md-8r {
+    padding-right: 5.6rem;
+  }
+
+  body .nhcontainer {
+    padding-top: 17rem;
+    transform: scale(80%);
+  }
+
+  body .nhcontainer .content {
+    margin-left: 0.25%;
+    margin-right: 0.25%;
+  }
+
+  body .nhcontainer .content h2 {
+    font-size: 4rem;
+  }
+
+  body .nhcontainer .content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/*Google icons sizing / colors and more*/
+.material-icons-outlined.md-8r {font-size: 8rem; user-select: none;}
+.material-icons-outlined.md-16r {font-size: 16rem; user-select: none;}
+.material-icons-round.md-8r {font-size: 8rem; user-select: none;}
