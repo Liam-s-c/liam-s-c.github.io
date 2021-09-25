@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
-* {
+
+
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,8 +19,7 @@ body {
   position: relative;
   user-select: none;
   z-index: 1;
-  height: 100vh;
-  border-bottom: -20vh solid transparent;
+  height: min-content;
 }
 
 
@@ -199,7 +200,7 @@ body .container .card .box .content h3 {
   color: #fff;
   z-index: 1;
   transition: 0.5s;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 body .container .card .box .content .p {
@@ -262,8 +263,9 @@ body .nhcontainer {
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 40px 0 0;
+  margin: 40px 0 0 0;
   padding-top: 10vh;
+  height: 100vh;
 }
 
 body .nhcontainer .content {
