@@ -139,7 +139,7 @@ body .container .card:nth-child(3) .box .content a {
 }
 
 body .container .card:nth-child(4) .box .content a {
-    background: #23bcc1;
+    background: #211333;
 }
 
 body .container .card:nth-child(5) .box .content a {
@@ -266,6 +266,7 @@ body .nhcontainer {
   padding-top: 0vh;
   padding-bottom: 0;
   height: 10vh;
+  
 }
 
 body .nhcontainer .content {
@@ -366,19 +367,25 @@ body .nhcontainer .content li{
 
 
 /*Phone and tablet font sizing*/
+@media only screen and (max-width: 1600px) {
+  body .nhcontainer {
+    padding-top: 2.5rem;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   body .nhcontainer {
-    padding-top: 13.5rem;
+    padding-top: 3.5rem;
   }
 }
 
 @media only screen and (max-width: 1100px) {
   body .nhcontainer {
-    padding-top: 16.5rem;
+    padding-top: 8.5rem;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   name.top {
     font-size: 44px;
   }
