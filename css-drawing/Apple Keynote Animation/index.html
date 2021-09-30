@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="apple keynote thing.ico"/> 
+    <title>Apple Keynote Anim.- Inverted</title>
+</head>
+<body translate="no" class="__bm__extension" style="transform: scale(50%);">
+  <canvas width="272" height="332"></canvas>
+<svg viewBox="0 0 400 488">
+  <path d="m 376.3299,351.06186 c 4.45361,47.0103 -51.46392,124.20619 -127.17526,105.40206 -75.71134,-18.80413 9.89692,-176.65979 69.7732,-140.53608 59.87628,36.12371 -80.02665,144.51868 -165.7732,140.53608 -51.44793,-2.38956 -95.0103,-28.70103 -80.65979,-101.4433 14.35051,-72.74227 207.83505,-255.3402 264.24742,-194.96907 56.41237,60.37113 -171.71134,177.15461 -229.60825,173.6907 -57.89691,-3.46391 -114.55671,-62.35051 -65.31959,-137.567 49.23712,-75.21649 131.76348,-45.721 131.76348,-45.721" fill="none" stroke="#4F7FFF" stroke-linecap="round" stroke-width="2"></path>
+  <path d="M207.83505,122.567C243.83505,117 308.04124,69.98969 288.24742,21.49485C215.62887,21.49485 199.858,109.20619 203.01031,131.84536" fill="none" stroke="#4F7FFF" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script id="rendered-js">
+console.clear();
+
+const canvas = document.querySelector('canvas');
+const svg = document.querySelector('svg');
+const ctx = canvas.getContext('2d');
+let width = svg.clientWidth;
+let height = svg.clientHeight;
+
+canvas.width = width;
+canvas.height = height;
+
+const gradients = [
+[
+[0, [140, 79, 21]],
+[10, [160, 168, 67]],
+[20, [121, 175, 71]],
+[30, [34, 124, 81]],
+[50, [8, 109, 85]],
+[60, [13, 167, 188]],
+[70, [2, 116, 170]],
+[80, [3, 71, 238]],
+[90, [20, 42, 236]],
+[100, [83, 44, 160]]],
+
+[
+[0, [124, 54, 88]],
+[100, [244, 126, 106]]]];
+
+
+
+const dots = [];
+class Dot {
+  constructor(x, y, color, delay) {
+    this.x = x;
+    this.y = y;
+    this.r = 0;
+    this.color = color;
+    this.delay = delay * 0.9;
+    this.tween = gsap.fromTo(this, {
+      r: 0,
+      x: x - 0.05,
+      y: y - 0.05 },
+    {
+      x: x,
+      y: y,
+      r: () => width * 0.03 + Math.abs(Math.sin(this.delay * 3.4 - 1.5)) * width * 0.03,
+      duration: 1.8,
+      ease: 'elastic.out(1, 0.5)',
+      delay: this.delay });
+
+  }
+  draw() {
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x * width, this.y * height, this.r, 0, 2 * Math.PI);
+    ctx.fill();
+  }}
+
+
+function init() {
+  const paths = svg.querySelectorAll('path');
+  const totalLength = [...paths].reduce(p => p.getTotalLength());
+  let sum_length = 0;
+  paths.forEach((path, pathIndex) => {
+    const length = path.getTotalLength();
+    for (let i = 0; i < length; i += 2) {
+      const point = path.getPointAtLength(i);
+      const x = point.x / 400;
+      const y = point.y / 488;
+      const RGB_color = getColor(pathIndex, length, i / length);
+      const color = `rgb(${RGB_color[0]}, ${RGB_color[1]}, ${RGB_color[2]})`;
+
+      const dot = new Dot(x, y, color, 1.5 - sum_length / totalLength);
+      dots.push(dot);
+      sum_length += 2;
+    }
+  });
+}
+
+/* Code copied from https://stackoverflow.com/a/30144587 */
+function pickHex(color1, color2, weight) {
+  var p = weight;
+  var w = p * 2 - 1;
+  var w1 = (w / 1 + 1) / 2;
+  var w2 = 1 - w1;
+  var rgb = [Math.round(color1[0] * w1 + color2[0] * w2),
+  Math.round(color1[1] * w1 + color2[1] * w2),
+  Math.round(color1[2] * w1 + color2[2] * w2)];
+  return rgb;
+}
+function getColor(pathIndex, pathLength, colorIndex) {
+  var colorRange = [];
+  let stop = false;
+  const gradient = gradients[pathIndex];
+  gradient.forEach((step, index) => {
+    if (!stop && colorIndex * 100 <= step[0]) {
+      if (index === 0) {
+        index = 1;
+      }
+      colorRange = [index - 1, index];
+      stop = true;
+    }
+  });
+
+  //Get the two closest colors
+  var firstcolor = gradient[colorRange[0]][1];
+  var secondcolor = gradient[colorRange[1]][1];
+  //Calculate ratio between the two closest colors
+  var firstcolor_x = pathLength * (gradient[colorRange[0]][0] / 100);
+  var secondcolor_x = pathLength * (gradient[colorRange[1]][0] / 100) - firstcolor_x;
+  var slider_x = pathLength * colorIndex - firstcolor_x;
+  var ratio = slider_x / secondcolor_x;
+
+  //Get the color with pickHex(thx, less.js's mix function!)
+  return pickHex(secondcolor, firstcolor, ratio);
+}
+
+
+function render() {
+  requestAnimationFrame(render);
+  ctx.clearRect(0, 0, width, height);
+  dots.forEach(dot => {
+    dot.draw();
+  });
+}
+
+window.addEventListener('click', () => {
+  dots.forEach(dot => {
+    dot.tween.restart(true);
+  });
+});
+
+window.addEventListener('resize', () => {
+  width = svg.clientWidth;
+  height = svg.clientHeight;
+
+  canvas.width = width;
+  canvas.height = height;
+  dots.forEach(dot => {
+    dot.tween.invalidate().restart(true);
+  });
+});
+
+init();
+requestAnimationFrame(render);
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body>
+</html>
