@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   background: #1c1c1c !important;
   position: relative;
-  user-select: none;
+  user-select: none;   
   z-index: 1;
 }
 
