@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="minimum-scale=1, initial-scale=1, width=device-width"
-    />
-    <title>ERROR!!!!!</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.ico"/> 
+    <link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
+    <title>Error 404</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZRVYC4D1C"></script>
     <script>
@@ -16,18 +18,79 @@
 
       gtag('config', 'G-MZRVYC4D1C');
     </script>
-  </head>
-  <body style="margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); background-color: black; color: white; text-align: center; font-size: 32px;">
-    <p>Short URL is invalid! (Or you have been spamming the site too much)</p>
-    <p>Add your link <a href="https://github.com/Liam-s-c/liamsc.net-shorten-db/issues/">here</a></p>
-    <p>Make an issue with the title being the link you want to shorten (including the http(s)://) </p>
-    <a href="https://liamsc.net/1"><img src="https://raw.githubusercontent.com/Liam-s-c/liamsc.net-shorten-db/master/website.png"></a>
-    <p>The newly created short url can be accessed via liamsc.net/{issue_number} (eg. <a href="https://liamsc.net/31">liamsc.net/31</a> will send you back here)</p>
-    <p style="color: rgb(0, 183, 255); font-size: 50px;">If you weren't putting in a short url, then check spelling and try again!</p>
-  </body>
+    
+</head>
+<body>
+    <name class="top"><a href="https://liamsc.net/" title="Go Home" style="z-index: auto;">LIAMSC</a></name>
+    <name class="top-sub" style="color: rgba(240, 248, 255, 0.734); transform: translateY(210%) translateX(-50%); font-size: 1.3rem; margin: 0;"><label id="lblGreetings"></label></name>
+    <name class="top-sub" style="color: rgba(240, 248, 255, 0.734); transform: translateY(260%) translateX(-50%); font-size: 1.5rem; margin: 0; color: rgba(255, 255, 255, 0.826);">Error 404</name>
+    <div class="container" style="padding-top: 9rem;">
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <h2><span class="material-icons-round md-8r">link</span></h2>
+              <h3>Shortener</h3>
+              <div class="p">Sometimes the link shortener can be broken, a lot of these reasons are user based. 1, if you have been spamming the site. 2, if you typed the link wrong in the title of the issue.</div>
+              <a href="https://liamsc.net/shorten">Please try again</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2><span class="material-icons-round md-8r">error</span></h2>
+                <h3>Page missing</h3>
+
+                <div class="p">Theres a chance the page you were looking for has gone for a walk. If after you re-check spelling and try to reload, you come back here, then the page might be missing</div>
+                <p><a href="https://liamsc.net/">Go back home</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2><span class="material-icons-round md-8r">warning</span></h2>
+                <h3>Spelling</h3>
+                
+                <div class="p">There is a chance your spelling / syntax is broken, please check the link is spelt correct and that there isnt two forward slashes, and try again.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="opacity: 0; height: 1px;">
+
+
+    </div>
+    <div class="nhcontainer" style="padding-top: 12rem;">
+        <div class="content">
+                <h3>Error 404</h3>
+                <div class="p" style="margin-left: 50px; margin-right:50px;">
+                    Error 404 can mean a lot of things, but usually its spelling on the users part, please make sure you check the spelling in the link, and make sure that the syntax is correct. If its a link that you clicked from liamsc.net (this page) please email me below, please attach a screenshot, is possible, and a reasonable explanation to repeat the issue, thanks. If you cannot access email for any reason, another fast way to reach me is on Discord, which you can copy my code below. Sorry for any inconvenience.
+                    
+                
+                </div>
+                <a href="mailto:contact@liamsc.net?subject=Error%20404&body=%0D%0A%0D%0ASent%20from%20error%20404%20page.">Email me</a>                <span class="tooltipped tooltipped-n tooltipped-no-delay" aria-label="Click to copy"><button class="btn" data-clipboard-text="Liam S#0001" style="transform: translateY(-1vh); background-color: #5865F2;">Add me on discord</button></span>
+                
+        </div>
+    </div>
+          
+
+          
+    <script type="text/javascript" src="js/greetings.js"></script>
+    <script type="text/javascript" src="js/my-tool-tip.js"></script>
+    <script src="https://rawcdn.githack.com/zenorocha/clipboard.js/v2.0.8/dist/clipboard.min.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.btn');
+  
+        clipboard.on('success', function (e) {
+          console.log(e);
+        });
+  
+        clipboard.on('error', function (e) {
+          console.log(e);
+        });
+      </script>
+</body>
 </html>

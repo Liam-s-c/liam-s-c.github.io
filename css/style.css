@@ -241,7 +241,10 @@ body .container .card .box .content a {
   transition: 0.3s;
 }
 body .container .card .box .content a:hover {
-  c
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+  transform: scale(110%) translateY(-5px);
 }
 
 
