@@ -1,0 +1,347 @@
+* { /* Poor Man's Reset */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* cards */
+:root {
+	--card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--numcards: 4;
+	--outline-width: 0px;
+}
+
+#cards {
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+}
+
+#card_1 {
+	--index: 1;
+}
+
+#card_2 {
+	--index: 2;
+}
+
+#card_3 {
+	--index: 3;
+}
+
+#card_4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+	@scroll-timeline cards-element-scrolls-in-body {
+		source: selector(body);
+		scroll-offsets:
+			/* Start when the start edge touches the top of the scrollport */
+			selector(#cards) start 1,
+			/* End when the start edge touches the start of the scrollport */
+			selector(#cards) start 0
+		;
+		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
+		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+		time-range: 4s;
+	}
+
+	.card {
+		--index0: calc(var(--index) - 1); /* 0-based index */
+		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+	}
+	
+	.card__content {
+		transform-origin: 50% 0%;
+		will-change: transform;
+
+		--duration: calc(var(--reverse-index0) * 1s);
+		--delay: calc(var(--index0) * 1s);
+
+		animation: var(--duration) linear scale var(--delay) forwards;
+		animation-timeline: cards-element-scrolls-in-body;
+	}
+
+	@keyframes scale {
+		to {
+			transform:
+				scale(calc(
+					1.1
+					-
+					calc(0.1 * var(--reverse-index))
+				));
+		}
+	}
+}
+
+
+
+/** PAGE STYLING **/
+
+
+
+
+header,
+main {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+header {
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+#cards {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid blue;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	gap: var(--card-margin);
+}
+
+.card {
+	outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+	outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+	grid-area: text;
+	width: 80%;
+	place-self: center;
+	text-align: left;
+
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+
+.card__content > figure {
+	grid-area: img;
+	overflow: hidden;
+}
+
+.card__content > figure > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 3.5em;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.42;
+}
+
+.btn {
+	background: rgb(188 87 36);
+	color: rgb(255 255 255);
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 0.25em;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    background-color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    transform: scale(110%) translateY(-5px);
+}
+
+#card_1 .card__content div p a{
+    background-color:cadetblue;
+}
+
+.card__content div p a {
+    transition: all 1s ease;
+}
+/* end of cards */
+
+/* Asides */
+aside {
+    padding-top: 3rem;
+	width: 75vw;
+	margin: 0 auto;
+	text-align: left;
+}
+
+aside p {
+	margin-bottom: 1em;
+}
+
+aside p img {
+    position: relative;
+    float:left;
+    padding: 0 10px 0 0
+}
+
+aside div.port p i {
+    color: gray;
+
+}
+
+aside div.port p.right{
+    text-align: right;
+    padding-left: 15%;}
+aside div.port p.left{
+    text-align: left;
+    padding-right: 15%;}
+aside h1 {
+    text-align: center;
+}
+
+/* end of asides */
+
+/* form */
+form {
+    background-color: #F2F2F2;
+    font-size: large;
+    padding: 30px;
+    margin: 0;
+}
+
+form h4 {
+    padding: 10px;
+}
+
+/*Styling input*/
+
+
+label, input, select:not(type=submit), textarea {
+    padding: 10px !important;
+    width: 100%;
+}
+
+input[type=text], input[type=number], input[type=email], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px, 0;
+    box-sizing: border-box;
+    border: 1px solid #5856C3;
+    border-radius: 4px;;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus select:focus {
+    background-color: #b3b9d54b;
+    outline: none !important;
+    color: rgb(97, 97, 97);
+    border: 1px solid #5856C3;
+}
+
+
+#submit {
+    background-color: #125B56;
+    color: white;
+    padding: 6px;
+    margin: 4px, 2px;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+textarea {
+    font-size: larger;
+}
+
+/* phone / tablet sizing */
+
+@media only screen and (max-width: 430px) {
+    .card__content div h2 {
+        font-size: 24px;
+    }
+    .card__content div p{
+        font-size: 14px;
+    }
+    aside p img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card__content div h2 {
+        font-size: 60px;
+    }
+    .card__content div p{
+        font-size: 36px;
+    }
+    header div h1 {
+        font-size: 64px;
+    }
+    header div p {
+        font-size: 56;
+    }
+    aside h1 {
+        font-size: 56px;
+    }
+    aside p {
+        font-size: 24px;
+    }
+}
+
+
+/* Making sure that the type="number" doesnt have up and down arrows */
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
