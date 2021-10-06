@@ -201,6 +201,18 @@ p {
     background-color:cadetblue;
 }
 
+#card_2 .card__content div p a{
+    background-color:cornflowerblue;
+}
+
+#card_3 .card__content div p a{
+    background-color:rgb(160, 95, 157);
+}
+
+#card_4 .card__content div p a{
+    background-color:rgb(160, 95, 114);
+}
+
 .card__content div p a {
     transition: all 1s ease;
 }
