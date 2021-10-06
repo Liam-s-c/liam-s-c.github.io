@@ -209,9 +209,13 @@ p {
 /* Asides */
 aside {
     padding-top: 3rem;
-	width: 75vw;
+	width: 100%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
 	margin: 0 auto;
 	text-align: left;
+    background-color: #222;
+    color: white;
 }
 
 aside p {
@@ -225,7 +229,7 @@ aside p img {
 }
 
 aside div.port p i {
-    color: gray;
+    color: rgb(209, 209, 209);
 
 }
 
@@ -243,10 +247,11 @@ aside h1 {
 
 /* form */
 form {
-    background-color: #F2F2F2;
+    background-color: #505050;
     font-size: large;
     padding: 30px;
     margin: 0;
+    color: white;
 }
 
 form h4 {
@@ -266,15 +271,15 @@ input[type=text], input[type=number], input[type=email], textarea, select {
     padding: 10px;
     margin: 8px, 0;
     box-sizing: border-box;
-    border: 1px solid #5856C3;
-    border-radius: 4px;;
+    border: 2.5px solid #5856C3;
+    border-radius: 4px;
 }
 
-input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus select:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus, select:focus {
     background-color: #b3b9d54b;
     outline: none !important;
-    color: rgb(97, 97, 97);
     border: 1px solid #5856C3;
+    color: white;
 }
 
 
@@ -293,6 +298,7 @@ input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, texta
 textarea {
     font-size: larger;
 }
+
 
 /* phone / tablet sizing */
 
