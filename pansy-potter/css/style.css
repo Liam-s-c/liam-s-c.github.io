@@ -275,17 +275,24 @@ input[type=text], input[type=number], input[type=email], textarea, select {
     border-radius: 4px;
 }
 
-input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus, select:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, textarea:focus {
     background-color: #b3b9d54b;
     outline: none !important;
     border: 1px solid #5856C3;
     color: white;
 }
 
+select:focus {
+    background-color: #ffffffde;
+    outline: none !important;
+    border: 1px solid #5856C3;
+    color: rgb(0, 0, 0);
+}
+
 
 #submit {
-    background-color: #125B56;
-    color: white;
+    background-color: #5856C3;
+    color: rgb(255, 255, 255);
     padding: 6px;
     margin: 4px, 2px;
     border-radius: 4px;
