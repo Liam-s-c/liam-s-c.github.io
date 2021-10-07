@@ -220,6 +220,8 @@ body .container .card .box .content .p a {
   padding: 0px 2px;
 }
 
+body .container .card .box .content a#cs {background-color: black ; color: white !important; cursor: not-allowed;}
+
 body .container .card .box .content .p a:hover {
   box-shadow: none;
   background:none;
