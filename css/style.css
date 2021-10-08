@@ -274,9 +274,9 @@ body .nhcontainer {
 body .nhcontainer .content {
   padding: 20px;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
   transform: translateY(-15rem);
+  margin-left: 50px; 
+  margin-right:50px;
 }
 
 body .nhcontainer .content h2 {
@@ -442,6 +442,18 @@ body .nhcontainer .content li{
   }
 }
 
+
+@media only screen and (max-width: 600px) {
+  body .nhcontainer {
+    padding: 0;
+    margin: 0;
+  }
+  body .nhcontainer .content {
+    padding: 0px;
+    margin-left: 3px;
+    margin-right: 3px
+  }
+}
 
 
 /*Google icons sizing / colors and more*/
