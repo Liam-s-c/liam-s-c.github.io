@@ -240,9 +240,13 @@ aside p img {
     padding: 0 10px 0 0
 }
 
+
 aside div.port p i {
     color: rgb(209, 209, 209);
+}
 
+aside p  h2{
+	margin-bottom: 3%;
 }
 
 aside div.port p.right{
