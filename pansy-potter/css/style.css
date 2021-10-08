@@ -1,9 +1,10 @@
+/* '* {}' will effect everything */
 * { /* Poor Man's Reset */
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-
+/* body styling, padding, margin 0, text-align: center, font-family open sans, margin left & right is 10px */
 body {
     padding: 0;
     margin: 0;
@@ -14,6 +15,7 @@ body {
 }
 
 /* cards */
+/* root targets the highest level parent element */
 :root {
 	--card-height: 40vw;
 	--card-margin: 4vw;
@@ -22,11 +24,13 @@ body {
 	--outline-width: 0px;
 }
 
+/* cards, padding bottom and margin bottom calculations, based on the number or cards, card-top-offset and card-margin */
 #cards {
 	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
 	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
+/* id card 1 - 4 */
 #card_1 {
 	--index: 1;
 }
@@ -42,34 +46,41 @@ body {
 #card_4 {
 	--index: 4;
 }
-
+/* end of card 1-4 id */
+/* card */
 .card {
 	position: sticky;
 	top: 0;
 	padding-top: calc(var(--index) * var(--card-top-offset));
 }
 
+/* animations */
 @supports (animation-timeline: works) {
-
+	/* scroll timeline */
 	@scroll-timeline cards-element-scrolls-in-body {
+		/* source selects body */
 		source: selector(body);
+		/* scroll offsets */
 		scroll-offsets:
 			/* Start when the start edge touches the top of the scrollport */
 			selector(#cards) start 1,
 			/* End when the start edge touches the start of the scrollport */
 			selector(#cards) start 0
 		;
+		/* start and end selector for id card */
 		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
 		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+		/* time range */
 		time-range: 4s;
 	}
 
+	/* class card */
 	.card {
 		--index0: calc(var(--index) - 1); /* 0-based index */
 		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
 		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
 	}
-	
+	/* class card_content */
 	.card__content {
 		transform-origin: 50% 0%;
 		will-change: transform;
@@ -80,7 +91,7 @@ body {
 		animation: var(--duration) linear scale var(--delay) forwards;
 		animation-timeline: cards-element-scrolls-in-body;
 	}
-
+	/* keyframes for the scaling of the cards */
 	@keyframes scale {
 		to {
 			transform:
@@ -96,22 +107,18 @@ body {
 
 
 /** PAGE STYLING **/
-
-
-
-
 header,
 main {
 	width: 80vw;
 	margin: 0 auto;
 }
-
+/* header */
 header {
 	height: 100vh;
 	display: grid;
 	place-items: center;
 }
-
+/* id cards */
 #cards {
 	list-style: none;
 	outline: calc(var(--outline-width) * 10) solid blue;
@@ -121,11 +128,11 @@ header {
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
 	gap: var(--card-margin);
 }
-
+/* class card */
 .card {
 	outline: var(--outline-width) solid hotpink;
 }
-
+/* class card_content */
 .card__content {
 	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
 	background: rgb(255, 255, 255);
@@ -141,7 +148,7 @@ header {
 	align-items: stretch;
 	outline: var(--outline-width) solid lime;
 }
-
+/* card_content > div */
 .card__content > div {
 	grid-area: text;
 	width: 80%;
@@ -152,34 +159,35 @@ header {
 	gap: 1em;
 	place-items: start;
 }
-
+/* card_content > figure */
 .card__content > figure {
 	grid-area: img;
 	overflow: hidden;
 }
-
+/* card_content > figure > img */
 .card__content > figure > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
+/* h1  */
 h1 {
 	font-weight: 300;
 	font-size: 3.5em;
 }
-
+/* h2 */
 h2 {
 	font-weight: 300;
 	font-size: 2.5em;
 }
-
+/* p */
 p {
 	font-family: sans-serif;
 	font-weight: 300;
 	line-height: 1.42;
 }
-
+/* class btn */
 .btn {
 	background: rgb(188 87 36);
 	color: rgb(255 255 255);
@@ -189,14 +197,14 @@ p {
 	border-radius: 0.25em;
     transition: 0.3s;
 }
-
+/* class btn hovering */
 .btn:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     background-color: rgb(71, 71, 71);
     color: rgb(255, 255, 255);
     transform: scale(110%) translateY(-5px);
 }
-
+/* id card 1-4 class card_content div p a background colour styling */
 #card_1 .card__content div p a{
     background-color:cadetblue;
 }
@@ -216,6 +224,8 @@ p {
 .card__content div p a {
     transition: all 1s ease;
 }
+
+/* end of styling card_content div p a's */
 /* end of cards */
 
 /* Asides */
@@ -229,32 +239,34 @@ aside {
     background-color: #222;
     color: white;
 }
-
+/* aside p */
 aside p {
 	margin-bottom: 1em;
 }
-
+/* aside p img */
 aside p img {
     position: relative;
     float:left;
     padding: 0 10px 0 0
 }
 
-
+/* aside div class port p i */
 aside div.port p i {
     color: rgb(209, 209, 209);
 }
-
+/* aside p h2 */
 aside p  h2{
 	margin-bottom: 3%;
 }
-
+/* aside div class port p class right */
 aside div.port p.right{
     text-align: right;
     padding-left: 15%;}
+/* aside div class port p class left */
 aside div.port p.left{
     text-align: left;
     padding-right: 15%;}
+/* aside h1 */
 aside h1 {
     text-align: center;
 }
@@ -275,7 +287,7 @@ form h4 {
 }
 
 /*Styling input*/
-
+/* most of this was just robbed from Cafe Carla */
 
 label, input, select:not(type=submit), textarea {
     padding: 10px !important;
@@ -321,7 +333,7 @@ select:focus {
 textarea {
     font-size: larger;
 }
-
+/* end of styling inputs, this might all change in the final version, but it's okay as it is */
 
 /* phone / tablet sizing */
 
@@ -357,7 +369,7 @@ textarea {
         font-size: 24px;
     }
 }
-
+/* end of phone/tablet sizings */
 
 /* Making sure that the type="number" doesnt have up and down arrows */
 
