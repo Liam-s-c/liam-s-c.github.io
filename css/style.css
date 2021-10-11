@@ -14,7 +14,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
-  background: #1c1c1c !important;
+  background: #181818 !important;
   position: relative;
   user-select: none;   
   z-index: 1;
