@@ -189,7 +189,21 @@ body .container .card:nth-child(5) .box .content a {
 body .container .card:nth-child(6) .box .content a {
     background: #c13323;
 }
-
+/* card id long */
+body .container .card#long{
+  height: 400px;
+  width: 90%;
+}
+@media only screen and (max-width: 650px) {
+  body .container .card#long{height: 475px;}
+}
+@media only screen and (max-width: 550px) {
+  body .container .card#long{height: 900px;}
+}
+body .container .card#long .box:hover{
+  transform: scale(103%);
+}
+/* end of card id long */
 body .container .card .box {
   position: absolute;
   top: 20px;
@@ -252,7 +266,7 @@ body .container .card .box .content .p {
 
 body .container .card .box .content .p a {
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(74, 77, 99, 0.699);
   margin-top: 0px;
   transition: 0;
   border-radius: 20px;
@@ -264,8 +278,8 @@ body .container .card .box .content a#cs {background-color: black ; color: white
 
 body .container .card .box .content .p a:hover {
   box-shadow: none;
-  background:none;
-  color: rgba(255, 255, 255, 0.535);
+  background: rgba(0, 0, 0, 0.404) !important;
+  color: rgba(255, 255, 255, 0.74);
   transform: scale(105%) translateY(-2px);
 }
 
@@ -341,7 +355,7 @@ body .nhcontainer .content .p {
 
 body .nhcontainer .content .p a {
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(74, 77, 99, 0.699);
   margin-top: 0px;
   transition: 0;
   border-radius: 0px;
@@ -351,8 +365,8 @@ body .nhcontainer .content .p a {
 
 body .nhcontainer .content .p a:hover {
   box-shadow: none;
-  background:none !important;
-  color: rgba(255, 255, 255, 0.535);
+  background: rgba(0, 0, 0, 0.404) !important;
+  color: rgba(255, 255, 255, 0.74);
   transform: scale(105%) translateY(-2px);
 }
 
