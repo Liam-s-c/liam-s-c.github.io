@@ -201,7 +201,7 @@ p {
 .btn:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     background-color: rgb(71, 71, 71);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transform: scale(110%) translateY(-5px);
 }
 /* id card 1-4 class card_content div p a background colour styling */
@@ -371,7 +371,7 @@ textarea {
 }
 /* end of phone/tablet sizings */
 
-/* Making sure that the type="number" doesnt have up and down arrows */
+/* Making sure that the type="number" doesn't have up and down arrows */
 
 
 
