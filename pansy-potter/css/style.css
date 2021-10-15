@@ -22,7 +22,7 @@ body {
 	--card-top-offset: 1em;
 	--numcards: 4;
 	--outline-width: 0px; 
-}
+} 
 
 /* cards, padding bottom and margin bottom calculations, based on the number or cards, card-top-offset and card-margin */
 #cards {
