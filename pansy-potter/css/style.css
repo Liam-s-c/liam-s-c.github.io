@@ -12,6 +12,7 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     margin-left: 10px;
     margin-right: 10px;
+	border-image-source: url(https://liamsc.net/pansy-potter/img/border.svg);
 }
 
 /* cards */
@@ -236,18 +237,28 @@ aside {
     padding-right: 12.5%;
 	margin: 0 auto;
 	text-align: left;
-    background-color: #222;
+	background:linear-gradient(to bottom, #63a378 0, #63a378 21%, rgb(34, 34, 34) 21%, rgb(34, 34, 34) 63.5%, rgb(36, 36, 36) 63%, rgb(36, 36, 36) 100%);
     color: white;
 }
+
+
+
 /* aside p */
 aside p {
 	margin-bottom: 1em;
 }
+
+/* aside img */
+aside img{
+	border-radius: 12px;
+}
+
 /* aside p img */
 aside p img {
     position: relative;
     float:left;
-    padding: 0 10px 0 0
+    padding: 0 10px 0 0;
+	border-radius: 24px;
 }
 
 /* aside div class port p i */
