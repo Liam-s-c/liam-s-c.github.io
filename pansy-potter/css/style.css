@@ -12,7 +12,6 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     margin-left: 10px;
     margin-right: 10px;
-	border-image-source: url(https://liamsc.net/pansy-potter/img/border.svg);
 }
 
 /* cards */
@@ -237,8 +236,10 @@ aside {
     padding-right: 12.5%;
 	margin: 0 auto;
 	text-align: left;
-	background:linear-gradient(to bottom, #63a378 0, #63a378 21%, rgb(34, 34, 34) 21%, rgb(34, 34, 34) 63.5%, rgb(36, 36, 36) 63%, rgb(36, 36, 36) 100%);
+	background:linear-gradient(179deg, rgb(27, 27, 27) 0, rgb(27, 27, 27) 21%, rgb(30, 30, 30) 21%, rgb(30, 30, 30) 63.5%, rgb(32, 32, 32) 63%, rgb(32, 32, 32) 87%, rgb(34, 34, 34) 70%, rgb(34, 34, 34) 100%);
     color: white;
+	border: black solid;
+	padding-bottom: 5%;
 }
 
 
@@ -286,7 +287,6 @@ aside h1 {
 
 /* form */
 form {
-    background-color: #505050;
     font-size: large;
     padding: 30px;
     margin: 0;
@@ -302,6 +302,7 @@ form h4 {
 
 label, input, select:not(type=submit), textarea {
     padding: 10px !important;
+	padding-bottom: 0;
     width: 100%;
 }
 
@@ -397,3 +398,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.material-icons-outlined.md-24 {font-size: 48px; user-select: none;}
+
+.material-icons-outlined.md-24:hover {background-color: #5856c350; transition: ease-in-out 150ms; color: white;}
