@@ -249,6 +249,8 @@ aside p {
 	margin-bottom: 1em;
 }
 
+aside div#Abt{	margin-left: 5em; margin-right: 5em;}
+
 /* aside img */
 aside img{
 	border-radius: 12px;
@@ -263,25 +265,43 @@ aside p img {
 }
 
 /* aside div class port p i */
-aside div.port p i {
+aside div#Port p i {
     color: rgb(209, 209, 209);
 }
 /* aside p h2 */
 aside p  h2{
 	margin-bottom: 3%;
 }
+aside div#Port {margin-left: 5em; margin-right: 5em;}
 /* aside div class port p class right */
-aside div.port p.right{
+aside div#Port p.right{
     text-align: right;
     padding-left: 15%;}
 /* aside div class port p class left */
-aside div.port p.left{
+aside div#Port p.left{
     text-align: left;
     padding-right: 15%;}
 /* aside h1 */
 aside h1 {
     text-align: center;
 }
+
+/* aside for services */
+
+aside div#Serv div#right h2 img{
+	float: right;
+	padding: 0 10px 0 10px;
+	max-width: 512px;
+}
+
+aside div#Serv{margin-left: 5em; margin-right: 5em;}
+
+aside div#Serv div#left h2 img{
+	float: left;
+	padding: 0 10px 0 10px;
+	max-width: 512px;
+}
+
 
 /* end of asides */
 
@@ -356,11 +376,23 @@ textarea {
     .card__content div p{
         font-size: 14px;
     }
-    aside p img {
-        width: 100%;
-    }
+	aside p {
+		font-size: 12px;
+	}
+	aside p img {
+		max-width: 48px !important;
+	}
+	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
+	aside div#Port{	margin-left: 1em; margin-right: 1em;}
+	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
 }
 
+@media only screen and (max-width: 800px) {
+	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
+	aside div#Port{	margin-left: 1em; margin-right: 1em;}
+	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
+	aside div#Serv h2 img{max-width: 64px; width: 100%;}
+}
 @media only screen and (min-width: 1200px) {
     .card__content div h2 {
         font-size: 60px;
@@ -372,14 +404,18 @@ textarea {
         font-size: 64px;
     }
     header div p {
-        font-size: 56;
+        font-size: 56px;
     }
     aside h1 {
         font-size: 56px;
     }
     aside p {
-        font-size: 24px;
+        font-size: 20px;
     }
+	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
+	aside div#Port{	margin-left: 1em; margin-right: 1em;}
+	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
+	aside div#Serv h2 img{max-width: 64px; width: 85%;}
 }
 /* end of phone/tablet sizings */
 
