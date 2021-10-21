@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   background: #181818 !important; 
   position: relative;
   user-select: none;   
+  font-family: "Open Sans", Arial, sans-serif;
   z-index: 1;
 }
 
@@ -107,12 +108,12 @@ name.top {
 }
 
 name.top a{
-  text-decoration:underline;
+  text-decoration: underline;
 	color: #2A482B;
 }
 name.top a:hover {
   color: rgba(177, 177, 177, 0.374);
-  font-size: 58px;
+  font-size: 3.85rem;
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.96);
   margin-bottom: 10px;
 }
@@ -127,6 +128,7 @@ name.top-sub {
   color: rgba(240, 248, 255, 0.734); 
   transform: translateY(210%) translateX(-50%);
   font-size: 1.3rem; margin: 0;
+  font-weight: 600;
 }
 
 /* Rounded border */
@@ -189,6 +191,19 @@ body .container .card:nth-child(5) .box .content a {
 body .container .card:nth-child(6) .box .content a {
     background: #c13323;
 }
+
+body .container .card:nth-child(7) .box .content a {
+  background: #213833;
+}
+
+body .container .card:nth-child(8) .box .content a {
+  background: #17333b;
+}
+
+
+body .container .card:nth-child(9) .box .content a {
+  background: #3b3417;
+}
 /* card id long */
 body .container .card#long{
   height: 400px;
@@ -236,6 +251,7 @@ body .container .card .box:before {
 body .container .card .box .content {
   padding: 20px;
   text-align: center;
+
 }
 
 body .container .card .box .content h2 {
@@ -258,7 +274,7 @@ body .container .card .box .content h3 {
 
 body .container .card .box .content .p {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 450;
   color: rgba(255, 255, 255, 0.9);
   z-index: 1;
   transition: 0.5s;
@@ -272,6 +288,7 @@ body .container .card .box .content .p a {
   border-radius: 20px;
   box-shadow: none;
   padding: 0px 2px;
+  font-weight: 800;
 }
 
 body .container .card .box .content a#cs {background-color: black ; color: white !important; cursor: not-allowed;}
@@ -507,6 +524,28 @@ body .nhcontainer .content li{
     margin-left: 3px;
     margin-right: 3px
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 12px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(71, 71, 71); 
 }
 
 
