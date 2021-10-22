@@ -532,7 +532,7 @@ body .nhcontainer .content li{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 13.5px;
+  width: 1.2vh;
 }
 
 /* Track */
