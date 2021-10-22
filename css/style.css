@@ -209,6 +209,10 @@ body .container .card#long{
   height: 400px;
   width: 90%;
 }
+
+body .container .card#long .box a:hover{
+  z-index: 1;
+}
 @media only screen and (max-width: 650px) {
   body .container .card#long{height: 475px;}
 }
