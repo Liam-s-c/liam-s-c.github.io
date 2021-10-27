@@ -34,6 +34,6 @@ Version Alpha or something idk:
 
 ![alt](https://liamsc.net/img/screenshot.png)
 
-- Version 3.5:
+- Version 3.6:
 
 (Current)
