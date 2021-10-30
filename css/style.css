@@ -17,7 +17,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
-  background: rgb(20, 20, 20) !important; 
+  background: rgb(20, 20, 20); 
   position: relative;
   user-select: none;   
   font-family: 'Roboto', sans-serif;
