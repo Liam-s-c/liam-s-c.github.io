@@ -100,6 +100,7 @@ name {
   font-size: 56px;
   font-weight: 400;
   font-family: 'Titan One', cursive;
+  padding-bottom: 10px;
 }
 
 name.top {
@@ -493,10 +494,15 @@ body .nhcontainer .content li{
 @media only screen and (max-width: 1000px) {
   name.top {
     font-size: 44px;
+    padding-bottom: 5px;
   }
   name.top-sub {
-    padding-top: 1vh;
-    transform: translateY(113%) translateX(-50%);
+    margin: 0;
+    padding-top: 0vh;
+    transform: translateY(150%);
+    width: 100%;
+    text-align: center;
+    transform: translateY(150%) translateX(-50%);
   }
 
   body .container .card .box .content h3 { 
@@ -555,8 +561,8 @@ body .nhcontainer .content li{
   }
   body .nhcontainer .content {
     padding: 0px;
-    margin-left: 3px;
-    margin-right: 3px
+    margin-left: 4px;
+    margin-right: 4px
   }
 }
 

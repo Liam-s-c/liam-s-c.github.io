@@ -118,6 +118,26 @@ header {
 	display: grid;
 	place-items: center;
 }
+
+header a {
+	background: rgb(188 87 36);
+	color: rgb(255 255 255);
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.2em;
+	border-radius: 0.15em;
+    transition: 0.3s;
+	font-size: 2em;
+}
+
+header a:hover {
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    background-color: rgb(71, 71, 71);
+    color: rgb(0, 0, 0);
+    transform: scale(110%) translateY(-5px);
+	transition: 500ms;
+}
+
 /* id cards */
 #cards {
 	list-style: none;
@@ -131,7 +151,13 @@ header {
 /* class card */
 .card {
 	outline: var(--outline-width) solid hotpink;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
+
+
 /* class card_content */
 .card__content {
 	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
@@ -195,7 +221,7 @@ p {
 	display: inline-block;
 	padding: 0.5em;
 	border-radius: 0.25em;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 /* class btn hovering */
 .btn:hover {
@@ -203,6 +229,7 @@ p {
     background-color: rgb(71, 71, 71);
     color: rgb(0, 0, 0);
     transform: scale(110%) translateY(-5px);
+	transition: 500ms;
 }
 /* id card 1-4 class card_content div p a background colour styling */
 #card_1 .card__content div p a{
@@ -384,6 +411,10 @@ textarea {
 	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
 	aside div#Port{	margin-left: 1em; margin-right: 1em;}
 	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
+	aside {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -391,7 +422,37 @@ textarea {
 	aside div#Port{	margin-left: 1em; margin-right: 1em;}
 	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
 	aside div#Serv h2 img{max-width: 64px; width: 100%;}
+	header p a {font-size: 0.9em; padding: 3px; padding-bottom: 3px;}
+	aside {
+		padding-left: 0.5vh;
+		padding-right: 0.5vh;
+	}
 }
+
+@media only screen and (max-width: 1550px){
+	aside h1{
+		font-size: smaller;
+	}
+	body{margin-left: 1px; margin-right: 1px;}
+
+	aside #Serv #right img, aside #Serv #left img{
+		float: none !important;
+		vertical-align: text-top;
+		padding: 0 10px 0 00px;
+		max-width: 512px;
+	}
+	aside #Serv{justify-content: center;}
+	aside #Serv h2, aside #Serv p, aside {
+		text-align: center;
+	}
+	aside #Serv p{
+		padding-top: 0px;
+	}
+	aside #Serv h2 img {
+		justify-content: center;
+	}
+}
+
 @media only screen and (min-width: 1200px) {
     .card__content div h2 {
         font-size: 60px;
@@ -405,6 +466,7 @@ textarea {
     header div p {
         font-size: 56px;
     }
+	header div p a {font-size: 1em;}
     aside h1 {
         font-size: 56px;
     }
