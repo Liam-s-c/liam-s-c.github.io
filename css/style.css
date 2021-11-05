@@ -574,7 +574,6 @@ body .nhcontainer .content li{
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgb(20, 20, 20);
-  padding: 5px;
 }
  
 /* Handle */
