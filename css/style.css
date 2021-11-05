@@ -8,6 +8,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
+  overflow-x: hidden;
 }
 
 body {
@@ -477,17 +478,29 @@ body .nhcontainer .content li{
   body .nhcontainer {
     padding-top: 2.5rem;
   }
+  body .nhcontainer .content {
+    margin-left: 30px; 
+    margin-right:30px;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
   body .nhcontainer {
     padding-top: 3.5rem;
   }
+  body .nhcontainer .content {
+    margin-left: 30px; 
+    margin-right:30px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
   body .nhcontainer {
     padding-top: 8.5rem;
+  }
+  body .nhcontainer .content {
+    margin-left: 30px; 
+    margin-right:30px;
   }
 }
 
@@ -539,8 +552,8 @@ body .nhcontainer .content li{
   }
 
   body .nhcontainer .content {
-    margin-left: 0.25%;
-    margin-right: 0.25%;
+    margin-left: 30px; 
+    margin-right:30px;
   }
 
   body .nhcontainer .content h2 {
@@ -561,8 +574,8 @@ body .nhcontainer .content li{
   }
   body .nhcontainer .content {
     padding: 0px;
-    margin-left: 4px;
-    margin-right: 4px
+    margin-left: 8px;
+    margin-right: 8px
   }
 }
 
