@@ -1,9 +1,11 @@
 /* '* {}' will effect everything */
-* { /* Poor Man's Reset */
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+*{ /* Poor mans reset*/
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+	}
 /* body styling, padding, margin 0, text-align: center, font-family open sans, margin left & right is 10px */
 body {
     padding: 0;
@@ -12,6 +14,7 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     margin-left: 10px;
     margin-right: 10px;
+	overflow-x:hidden;
 }
 
 /* cards */
@@ -398,6 +401,15 @@ textarea {
 @media only screen and (max-width: 430px) {
     body main ul#cards div.card__content div h2{font-size: 16px;}
     body main ul#cards div.card__content div p{font-size: 14px;}
+	header div h1{
+		font-size: 42px;
+	}
+	header div h2{
+		font-size: 32px;
+	}
+	header div p{
+		font-size: 24px;
+	}
 
 	aside p {
 		font-size: 12px;
@@ -405,6 +417,7 @@ textarea {
 	aside p img {
 		max-width: 48px !important;
 	}
+	header a .material-icons-outlined.md-24 {font-size: 32px; user-select: none; padding: 1px;}
 	aside div#Serv h2{font-size: 22px;}
 	aside div#Serv p{font-size: 12px;}
 	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
