@@ -397,10 +397,11 @@ textarea {
 /* phone / tablet sizing */
 
 @media only screen and (max-width: 430px) {
-    body main ul#cards div.card__content div h2{font-size: 16px;}
-    body main ul#cards div.card__content div p{font-size: 14px;}
+    body main ul#cards div.card__content div h2{font-size: 20px;}
+    body main ul#cards div.card__content div p{font-size: 16px;}
+	body main ul#cards div.card__content a{font-size: 12px;}
 	header div h1{
-		font-size: 42px;
+		font-size: 52px;
 	}
 	header div h2{
 		font-size: 32px;
@@ -410,14 +411,14 @@ textarea {
 	}
 
 	aside p {
-		font-size: 12px;
+		font-size: 21px;
 	}
 	aside p img {
 		max-width: 48px !important;
 	}
 	header a .material-icons-outlined.md-24 {font-size: 32px; user-select: none; padding: 1px;}
-	aside div#Serv h2{font-size: 22px;}
-	aside div#Serv p{font-size: 12px;}
+	aside div#Serv h2{font-size: 32px;}
+	aside div#Serv p{font-size: 16px;}
 	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
 	aside div#Port{	margin-left: 1em; margin-right: 1em;}
 	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
