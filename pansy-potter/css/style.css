@@ -12,6 +12,7 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     margin-left: 10px;
     margin-right: 10px;
+	overflow-x:hidden;
 }
 
 /* cards */
@@ -396,18 +397,17 @@ textarea {
 /* phone / tablet sizing */
 
 @media only screen and (max-width: 430px) {
-    .card__content div h2 {
-        font-size: 24px;
-    }
-    .card__content div p{
-        font-size: 14px;
-    }
+    body main ul#cards div.card__content div h2{font-size: 16px;}
+    body main ul#cards div.card__content div p{font-size: 14px;}
+
 	aside p {
 		font-size: 12px;
 	}
 	aside p img {
 		max-width: 48px !important;
 	}
+	aside div#Serv h2{font-size: 22px;}
+	aside div#Serv p{font-size: 12px;}
 	aside div#Abt{	margin-left: 1em; margin-right: 1em;}
 	aside div#Port{	margin-left: 1em; margin-right: 1em;}
 	aside div#Serv{	margin-left: 1em; margin-right: 1em;}
@@ -415,6 +415,11 @@ textarea {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+	header a {font-size: 14px; margin: 3px}
+	aside div#img img{height: 100%; width: 100%; overflow: hidden; position: relative; height: 164px;}
+	
+	.material-icons-outlined.md-24{font-size:12px ;}
+	
 }
 
 @media only screen and (max-width: 800px) {
@@ -430,8 +435,17 @@ textarea {
 }
 
 @media only screen and (max-width: 1550px){
+	.card__content div h2 {
+        font-size: 24px;
+    }
+    .card__content div p{
+        font-size: 18px;
+    }
+	aside p {
+		font-size: 14px;
+	}
 	aside h1{
-		font-size: smaller;
+		font-size: 32px;
 	}
 	body{margin-left: 1px; margin-right: 1px;}
 
@@ -497,5 +511,3 @@ input[type=number] {
 }
 
 .material-icons-outlined.md-24 {font-size: 48px; user-select: none;}
-
-.material-icons-outlined.md-24:hover {background-color: #5856c350; transition: ease-in-out 150ms; color: white;}
