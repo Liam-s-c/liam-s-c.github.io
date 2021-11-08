@@ -409,7 +409,10 @@ textarea {
 	header div p{
 		font-size: 24px;
 	}
-
+	header a {
+		font-size: 20px;
+		margin: 3px;
+	}
 	aside p {
 		font-size: 21px;
 	}
@@ -426,7 +429,7 @@ textarea {
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-	header a {font-size: 14px; margin: 3px}
+	/* header a {font-size: 14px; margin: 3px} */
 	aside div#img img{height: 100%; width: 100%; overflow: hidden; position: relative; height: 164px;}
 	
 	.material-icons-outlined.md-24{font-size:12px ;}
