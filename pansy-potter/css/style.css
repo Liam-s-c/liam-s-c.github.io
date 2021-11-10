@@ -329,6 +329,13 @@ aside div#Serv div#left h2 img{
 	max-width: 512px;
 }
 
+aside div#Serv #right p{
+	margin-left: 10px;
+}
+
+aside div#Serv #left p{
+	margin-right: 10px;
+}
 
 /* end of asides */
 
@@ -525,3 +532,5 @@ input[type=number] {
 }
 
 .material-icons-outlined.md-24 {font-size: 48px; user-select: none;}
+
+
