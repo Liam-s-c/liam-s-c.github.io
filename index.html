@@ -1,160 +1,716 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- meta data -->
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- embed data -->
-  
-      <meta name="description" content="The personal site for Liam SC">
-      <meta content="liamsc.net" property="og:title" />
-      <meta content="The personal site for Liam SC" property="og:description" />
-      <meta content="https://liamsc.net/" property="og:url" />
-      <meta property="og:locale" content="en-US">
-      <meta property="og:image" content="https://liamsc.net/img/icon-128.png">
-      <meta property="twitter:card" content="summary_large_image">
-  
-    <!-- end of meta data  -->
-    <!-- input stylesheets -->
-      <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-      <!-- shortcut icon -->
-      <link rel="shortcut icon" type="image/x-icon" href="https://liamsc.net/img/icon.ico"/> 
-      <!-- primer css -->
-      <link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="./css/style.css">
-      <title>Liamsc.net</title>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZRVYC4D1C"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-  
-        gtag('config', 'G-MZRVYC4D1C');
-      </script>
-      <!-- end of google analytics -->
-      
-  </head>
-<body>
-  <name class="top"><a href="https://liamsc.net/" title="Go Home" style="z-index: auto;">LIAMSC</a></name>
-  <name class="top-sub"><label id="lblGreetings"></label></name>
-    <div class="container" style="padding-top: 5vh; ">
-        <div class="card">
-          <div class="box">
-            <div class="content">
-              <h2><span class="material-icons-round md-8r">person</span></h2>
-              <h3>About me</h3>
-              <div class="p">Hello, I'm Liam S, and I am <span id="age" style="width: 40%; display:inline-block;">18.584878048</span> years old. <br> I've been developing for <span id="profor" style="width: 40%; display:inline-block;">6.584878048</span> years! Learn more about me below.</div>
-              <a href="https://liamsc.net/about-me">Read More About Me</a>
-              <a href="https://github.com/liam-s-c">Check Out My GitHub</a>
-            </div>
-          </div>
-        </div>
-      
-      
-        <div class="card">
-          <div class="box">
-            <div class="content">
-              <h2><span class="material-icons-outlined md-8r">event</span></h2>
-              <h3>Current Project</h3>
-              <div class="p">Currently I'm working on <br><b>A Minecraft modpack, some mods, Updates to VSCode theme and planning future projects <sup style="font-size: 0.9rem;">like usual!</sup></b></div>
-              <a href="https://liamsc.net/current-project">Click Here For More Info</a>
-              <a href="https://liamsc.net/current-progress">Check Out The Progress</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-                <h2  ><span class="material-icons-outlined md-8r">note_add</span></h2>
-              <h3>Notepad</h3>
-              <div class="p">I have a notepad where I just jot down some thoughts I have throughout the day or what I'm working on throughout the hours of the day!</div>
-              <a href="https://liamsc.net/notebook">Read my notes</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-              <h2><span class="material-icons-outlined md-8r">description</span></h2>
-              <h3>My Projects</h3>
-              <div class="p">Where all my projects are located! Do you want to download software and/or scripts, look at some code? Well you're in luck, well just not ... yet</div>
-              <a id="cs">Coming Soon<sup>tm</sup></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-              <h2><span class="material-icons-outlined md-8r">link</span></h2>
-              <h3>Url Shortener</h3>
-              <div class="p">I made a url shortener using a github issues page as a database, learn more below.</div>
-              <a href="https://liamsc.net/shorten">Learn more here</a>
-              <a href="https://liamsc.net/60">Shorten here</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="box">
-            <div class="content">
-                <h2  ><span class="material-icons-outlined md-8r">games</span></h2>
-              <h3>My Minecraft Modpack</h3>
-              <div class="p">A Futuristic Modpack For Minecraft.
-                This is minecraft modpack goodness at it's finest. Check back for updates.</div>
-              <a id="cs" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0) !important;">Currently being developed!</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-              <h2  ><span class="material-icons-round md-8r">dark_mode</span></h2>
-              <h3>Visual Studio Code Theme</h3>
-              <div class="p">I made a Visual Studio Code Dark Theme. Learn more below</div>
-              <a href="https://liamsc.net/projects/downloads/vscode-theme">Learn More Here</a>
-              <a href="https://marketplace.visualstudio.com/items?itemName=Liamsc.liamsc-net-dark">Download Here</a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-                <h2><span class="material-icons-outlined md-8r">keyboard_command_key</span></h2>
-              <h3>AutoHotKey</h3>
-              <div class="p">I Have lots of AutoHotKey scripts that i use to automate meaningless tasks! Check them out at the links below</div>
-              <a href="https://liamsc.net/projects/downloads/ahk">Learn More Here</a>
-              <a href="https://github.com/liamsc-net/ahk/releases/latest">Download Here</a><br>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div class="content">
-                <h2><span class="material-icons-round md-8r">edit</span></h2>
-              <h3>CSS Drawing</h3>
-              <div class="p">I Have drawn a few things using CSS, check it all out at the link below, most of the projects there are <b>only</b> using css, js and html</div>
-              <a href="https://liamsc.net/css-drawing">Check it out here!</a><br>
-            </div>
-          </div>
-        </div>
-        
-        
-
-
-      </div>
-
-    <script type="text/javascript" src="js/age.js"></script>
-    <script type="text/javascript" src="js/pro-for.js"></script>
-    <script type="text/javascript" src="js/greetings.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#00bfbf"><title>Liam S </title><script type="application/ld+json">{
+                "@context": "https://liamsc.net",
+                "@type": "Network",
+                "name": "Liam S",
+                "url": "https://liamsc.net",
+                "logo": "https://liamsc.net/logo.png",
+                "email": "mailto:hey@liamsc.net"
+            }</script><meta name="author" content="Liam S"><meta name="description" content="Hey, I'm Liam S, a Computer Science student based in the United Kingdom. I love all things technical. Talk soon!"><meta name="keywords" content="jo,lienhoop,jolienhoop,computer,science,bremen,germany,personal,website,portfolio,template,kit,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp"><meta property="og:image" content="/social-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:title" content="Liam S | Bremen, Germany"><meta property="og:site_name" content="liamsc.net"><meta property="og:url" content="https://liamsc.net"><meta property="og:description" content="Hey, I'm Liam S, a Computer Science student based in the United Kingdom. I love all things technical. Talk soon!"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&amp;display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link href="/static/css/main.cf779596.chunk.css" rel="stylesheet"><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: #fafafa;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  background-color: #111111;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #111111;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fafafa;
+  padding: 4px 8px;
+  font-size: 11px;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: Roboto Mono, monospace;
+  font-weight: 500;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: #3da4c1;
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1.0714285714285714rem;
+  font-family: Roboto Mono, monospace;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+@media (min-width:600px) {
+  .MuiTypography-body1 {
+    font-size: 1.1667rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-body1 {
+    font-size: 1.1667rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-body1 {
+    font-size: 1.1667rem;
+  }
+}
+.MuiTypography-caption {
+  font-size: 0.8571428571428571rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 3.9285714285714284rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h1 {
+    font-size: 5.3556rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h1 {
+    font-size: 6.2125rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h1 {
+    font-size: 6.8552rem;
+  }
+}
+.MuiTypography-h2 {
+  font-size: 2.642857142857143rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h2 {
+    font-size: 3.3333rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h2 {
+    font-size: 3.9583rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h2 {
+    font-size: 4.375rem;
+  }
+}
+.MuiTypography-h3 {
+  font-size: 2.2142857142857144rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h3 {
+    font-size: 2.7849rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h3 {
+    font-size: 3.2134rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h3 {
+    font-size: 3.4276rem;
+  }
+}
+.MuiTypography-h4 {
+  font-size: 1.7142857142857142rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h4 {
+    font-size: 2.0243rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h4 {
+    font-size: 2.2267rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h4 {
+    font-size: 2.4291rem;
+  }
+}
+.MuiTypography-h5 {
+  font-size: 1.3571428571428572rem;
+  font-family: Roboto Mono, monospace;
+  font-weight: 500;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h5 {
+    font-size: 1.4993rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h5 {
+    font-size: 1.6867rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h5 {
+    font-size: 1.6867rem;
+  }
+}
+.MuiTypography-h6 {
+  font-size: 1.2142857142857142rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+@media (min-width:600px) {
+  .MuiTypography-h6 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-h6 {
+    font-size: 1.4063rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-h6 {
+    font-size: 1.4063rem;
+  }
+}
+.MuiTypography-subtitle1 {
+  font-size: 1.0714285714285714rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+@media (min-width:600px) {
+  .MuiTypography-subtitle1 {
+    font-size: 1.1429rem;
+  }
+}
+@media (min-width:960px) {
+  .MuiTypography-subtitle1 {
+    font-size: 1.1429rem;
+  }
+}
+@media (min-width:1280px) {
+  .MuiTypography-subtitle1 {
+    font-size: 1.1429rem;
+  }
+}
+.MuiTypography-subtitle2 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.8571428571428571rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3da4c1;
+}
+.MuiTypography-colorSecondary {
+  color: #c1f160;
+}
+.MuiTypography-colorTextPrimary {
+  color: #fff;
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(255, 255, 255, 0.7);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiLink">
+.MuiLink-underlineNone {
+  text-decoration: none;
+}
+.MuiLink-underlineHover {
+  text-decoration: none;
+}
+.MuiLink-underlineHover:hover {
+  text-decoration: underline;
+}
+.MuiLink-underlineAlways {
+  text-decoration: underline;
+}
+.MuiLink-button {
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiLink-button::-moz-focus-inner {
+  border-style: none;
+}
+.MuiLink-button.Mui-focusVisible {
+  outline: auto;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss3 {
+  fill: #fafafa;
+  transition: all 0.5s ease;
+}
+.jss3:hover {
+  fill: #2a482b;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss2 {
+  top: 48px;
+  left: 48px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+  border-radius: 50%;
+}
+</style><style data-jss="" data-meta="MuiContainer">
+.MuiContainer-root {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiContainer-root {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.MuiContainer-disableGutters {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width:600px) {
+  .MuiContainer-fixed {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-fixed {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-fixed {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-fixed {
+    max-width: 1920px;
+  }
+}
+@media (min-width:0px) {
+  .MuiContainer-maxWidthXs {
+    max-width: 444px;
+  }
+}
+@media (min-width:600px) {
+  .MuiContainer-maxWidthSm {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-maxWidthMd {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-maxWidthLg {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1920px;
+  }
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss4 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media (max-width: 768px) {
+  .jss4 {
+    margin-left: 32px;
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    color-adjust: exact;
+  }
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: #fff;
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.7142857142857142rem;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: #111111;
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #3da4c1;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(61, 164, 193, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #c1f160;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(193, 241, 96, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.2857142857142856rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.7142857142857142rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3da4c1;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #c1f160;
+}
+.MuiSvgIcon-colorAction {
+  color: #fff;
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.4285714285714284rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.5rem;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss5 {
+  right: 48px;
+  width: 2.5rem;
+  bottom: 48px;
+  height: 2.5rem;
+  position: absolute;
+}
+.jss6 {
+  font-size: 1.25rem;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss1 {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+</style><meta name="theme-color" content="#3da4c1" data-react-helmet="true"><meta name="author" content="Liam S" data-react-helmet="true"><meta name="description" content="Hey, I'm Liam S, a Computer Science student based in the United Kingdom. I love all things technical. Talk soon!" data-react-helmet="true"><meta name="keywords" content="personal,website,portfolio,computer,United Kingdom,react,github,linkedin,google,material,design,ui,webapp" data-react-helmet="true"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="jss1"><canvas aria-hidden="true" class="displacement-sphere displacement-sphere--exited"></canvas><a class="MuiTypography-root MuiLink-root MuiLink-underlineNone jss2 MuiTypography-h6 MuiTypography-colorInherit MuiTypography-noWrap" href="https://liamsc.net" title="Liam S"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="jss3"><path d="M1515 3480 c-239 -65 -406 -218 -393 -360 6 -57 34 -99 95 -141 45 -31 45 -31 38 -78 -3 -25 -12 -66 -19 -91 -7 -25 -24 -81 -36 -125 -29 -99 -71 -230 -116 -357 -19 -54 -50 -144 -70 -200 -51 -146 -130 -352 -164 -428 -16 -36 -64 -146 -105 -245 -85 -200 -179 -400 -192 -408 -4 -3 -7 68 -5 158 3 158 3 164 -18 175 -24 13 -50 -1 -50 -27 0 -8 -13 -26 -29 -41 -30 -28 -34 -43 -66 -217 -27 -145 -36 -183 -72 -310 -56 -198 -94 -309 -114 -331 -22 -23 -24 -45 -7 -62 18 -18 50 -15 123 12 57 21 76 35 157 119 105 108 154 143 291 211 118 58 249 88 837 192 52 9 181 35 285 56 474 97 917 188 990 203 115 24 307 74 319 84 6 4 40 18 76 31 36 13 66 24 67 25 2 1 7 30 12 66 32 224 213 370 458 370 94 0 109 5 99 37 -16 49 -149 79 -268 61 -86 -12 -171 -37 -250 -73 l-57 -25 7 32 c4 17 7 77 6 132 0 117 -19 175 -90 282 -112 167 -282 265 -593 343 -169 43 -243 51 -466 51 -160 0 -223 -4 -314 -21 -62 -11 -115 -19 -117 -17 -5 4 139 426 153 452 5 9 31 33 58 53 58 45 88 83 83 108 -2 15 -12 10 -55 -28 -60 -54 -120 -91 -183 -113 -60 -21 -185 -45 -236 -45 -119 0 -113 114 10 219 64 55 142 94 264 130 126 37 158 54 177 91 21 41 20 75 -2 64 -10 -4 -34 -7 -53 -6 -19 1 -116 4 -215 7 -156 4 -190 2 -250 -15z m825 -1230 c126 -30 250 -90 318 -154 134 -125 201 -374 145 -536 -20 -58 -38 -73 -104 -85 l-36 -7 -12 49 c-48 186 -143 408 -232 539 -43 64 -116 133 -219 207 l-25 17 45 -6 c25 -3 79 -14 120 -24z m-507 -555 c127 -32 192 -63 262 -126 73 -68 159 -178 143 -184 -18 -6 -204 -39 -388 -70 -85 -14 -175 -30 -200 -35 -25 -6 -108 -22 -185 -35 -77 -14 -150 -28 -162 -31 -22 -6 -22 -5 11 92 19 55 52 144 74 199 22 55 44 112 47 127 10 39 39 60 103 74 92 20 183 16 295 -11z" transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"></path></svg></a><main class="MuiContainer-root jss4 MuiContainer-maxWidthSm"><h1 class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"><p>&nbsp;</p></h1><h2 class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"><p>&nbsp;</p><p>&nbsp;</p></h2></main><button class="MuiButtonBase-root MuiIconButton-root jss5 MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="Toggle theme" title="Toggle theme"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss6" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg></span></button></div></div><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],s=0,p=[];s<i.length;s++)a=i[s],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&p.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);p.length;)p.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"834def63",4:"4e52329f"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this["webpackJsonppersonal-website-react"]=this["webpackJsonppersonal-website-react"]||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var f=c;t()}([])</script><script src="/static/js/2.7403c0fc.chunk.js"></script><script src="/static/js/main.0d6d2cb6.chunk.js"></script></body></html>
