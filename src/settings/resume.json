@@ -1,0 +1,44 @@
+{
+    "basics": {
+        "name": "Liam S",
+        "label": "Computer Science student",
+        "email": "hey@liamsc.net",
+        "phone": "(XXX) XXX-XXXX",
+        "picture": "jl.png",
+        "x_title": "Hey, I'm",
+        "job": "CS student",
+        "description": "Hey, I'm Liam S, a Computer Science student based in the United Kingdom. I love all things technical. Talk soon!",
+        "summary": "based in the United Kingdom.",
+        "keywords": "personal,website,portfolio,computer,United Kingdom,react,github,linkedin,google,material,design,ui,webapp",
+        "url": "https://liamsc.net",
+        "location": {
+            "address": "XX XXXXXstreet",
+            "postalCode": "XXXXX",
+            "city": "Malvern",
+            "country": "United Kingdom",
+            "countryCode": "UK",
+            "region": "XXXXX"
+        },
+        "profiles": [
+            {
+                "network": "Google",
+                "username": "hey@liamsc.net",
+                "url": "mailto:hey@liamsc.net",
+                "x_icon": "fab fa-google"
+            },
+            
+            {
+                "network": "GitHub",
+                "username": "Liam-s-c",
+                "url": "https://github.com/Liam-s-c",
+                "x_icon": "fab fa-github"
+            },
+            {
+                "network": "Discord",
+                "username": "Liam S#0001",
+                "url": "https://discord.com",
+                "x_icon": "fab fa-discord"
+            }
+        ]
+    }
+}

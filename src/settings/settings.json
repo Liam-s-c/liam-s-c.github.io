@@ -1,0 +1,10 @@
+{
+  "colors": {
+    "primary": "#3da4c1",
+    "secondary": "#c1f160",
+    "tertiary": "#2a482b",
+    "smLight": "#111111",
+    "black": "#111111",
+    "white": "#fafafa"
+  }
+}
