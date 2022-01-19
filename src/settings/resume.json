@@ -24,7 +24,7 @@
                 "network": "Google",
                 "username": "hey@liamsc.net",
                 "url": "mailto:hey@liamsc.net",
-                "x_icon": "fab fa-google"
+                "x_icon": "fas fa-envelope"
             },
             
             {
@@ -33,11 +33,40 @@
                 "url": "https://github.com/Liam-s-c",
                 "x_icon": "fab fa-github"
             },
+
+            {
+                "network": "GitHub",
+                "username": "Liamsc-net",
+                "url": "https://github.com/Liamsc-net",
+                "x_icon": "fab fa-github"
+            },
+
+            {
+                "network": "Gist",
+                "username": "Gist",
+                "url": "https://gist.github.com/Liam-s-c",
+                "x_icon": "fab fa-github-alt"
+            },
+
             {
                 "network": "Discord",
                 "username": "Liam S#0001",
                 "url": "https://discord.com",
                 "x_icon": "fab fa-discord"
+            },
+
+            {
+                "network": "Spotify",
+                "username": "Liam S✨",
+                "url": "https://open.spotify.com/user/m4dw1kj1irhq2sc223ud92fov?si=bf6dc519ffa74c88",
+                "x_icon": "fab fa-spotify"
+            },
+
+            {
+                "network": "Twitter",
+                "username": "liam_s_c_",
+                "url": "https://twitter.com/liam_s_c_",
+                "x_icon": "fab fa-twitter"
             }
         ]
     }
